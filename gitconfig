@@ -1,24 +1,20 @@
 [core]
   editor = vim
   quotepath = false
-  pager = less -r
 [user]
   name = t-yamagishi
-[credential]
-  helper = osxkeychain
+  email = t-yamagishi@esm.co.jp
 [alias]
   co = checkout
-  a  = add
+  a = add
   ci = commit
   br = branch
   st = status
-  log-color = log --decorate --oneline --color --graph
-  log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
-  log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-  showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
-[color]
-  status = auto
-  diff = auto
-  branch = auto
-  interactive = auto
-  grep = auto
+  diffc = diff --cached
+[fetch]
+  prune = true
+[init]
+  defaultBranch = main
+[rebase]
+  autosquash = true
+
